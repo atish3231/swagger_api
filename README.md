@@ -1,7 +1,7 @@
 **REST Assured - Swagger Petstore - OpenAPI**
 
 This repository contains example tests for sample Petstore server.
-API Automation Framwork built using Rest Assured, Java, Gradle, TestNG, Extent Reports.
+API Automation Framwork built using Rest Assured, Java, Gradle, TestNG
 
 Test Driven Framework
 
