@@ -32,6 +32,7 @@ public class PetTests extends BaseTest {
 				.post(PET_ENDPOINT);
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		id = jsonPathEvaluator.get("id");
+		response.then().statusCode(200);
 		response.prettyPrint();
 	}
 
@@ -42,6 +43,7 @@ public class PetTests extends BaseTest {
 		PetDataClass pet = pet_data_creator.petDataforUpdate(i);
 		Response response = given().header("Content-Type", "application/json").body(pet).put(PET_ENDPOINT);
 		response.prettyPrint();
+		response.then().statusCode(200);
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		name = jsonPathEvaluator.get("name");
 		status = jsonPathEvaluator.get("status");
@@ -55,6 +57,7 @@ public class PetTests extends BaseTest {
 		Response response = given().header("Content-Type", "application/json").queryParam("status", status)
 				.get(PET_ENDPOINT + "/findByStatus");
 		response.prettyPrint();
+		response.then().statusCode(200);
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		List<String> getAllNames = jsonPathEvaluator.get("name");
 		if (!getAllNames.contains(name)) {

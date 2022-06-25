@@ -4,7 +4,6 @@ import static io.restassured.RestAssured.given;
 
 import java.util.List;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
@@ -49,11 +48,11 @@ public class UserAPITest extends BaseTest {
 
 	@Test(dependsOnMethods = "updateUserDetail", priority = 2)
 	public void getUserDetail() {
-		System.out.println(username);
+
 		Response response = given().header("Content-Type", "application/json").contentType(ContentType.JSON)
 				.get(String.format("/user/%s", username));
 		response.prettyPrint();
 
-		Assert.assertEquals(200, response.getStatusCode());
+		response.then().statusCode(200);
 	}
 }
