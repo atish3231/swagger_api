@@ -2,58 +2,58 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-24T21:43:14 IST" name="Suite" finished-at="2022-06-24T21:43:29 IST" duration-ms="15622">
+  <suite started-at="2022-06-25T16:31:44 IST" name="Suite" finished-at="2022-06-25T16:32:16 IST" duration-ms="32150">
     <groups>
     </groups>
-    <test started-at="2022-06-24T21:43:14 IST" name="Test" finished-at="2022-06-24T21:43:29 IST" duration-ms="15622">
+    <test started-at="2022-06-25T16:31:44 IST" name="Test" finished-at="2022-06-25T16:32:16 IST" duration-ms="32150">
       <class name="com.test.pet.ApiTestCases.PetTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-24T21:43:14 IST" name="setUp" finished-at="2022-06-24T21:43:15 IST" duration-ms="920" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-25T16:31:44 IST" name="setUp" finished-at="2022-06-25T16:31:49 IST" duration-ms="4418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addNewPet()[pri:0, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-24T21:43:15 IST" name="addNewPet" finished-at="2022-06-24T21:43:19 IST" duration-ms="4687" status="PASS">
+        <test-method signature="addNewPet()[pri:0, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-25T16:31:49 IST" name="addNewPet" finished-at="2022-06-25T16:32:06 IST" duration-ms="16910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewPet -->
-        <test-method signature="updatePet()[pri:2, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-24T21:43:25 IST" name="updatePet" finished-at="2022-06-24T21:43:27 IST" depends-on-methods="com.test.pet.ApiTestCases.PetTests.addNewPet" duration-ms="2091" status="PASS">
+        <test-method signature="updatePet()[pri:2, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-25T16:32:13 IST" name="updatePet" finished-at="2022-06-25T16:32:15 IST" depends-on-methods="com.test.pet.ApiTestCases.PetTests.addNewPet" duration-ms="1822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updatePet -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-24T21:43:25 IST" name="setUp" finished-at="2022-06-24T21:43:25 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-25T16:32:13 IST" name="setUp" finished-at="2022-06-25T16:32:13 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="getPetsByStatus()[pri:3, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-24T21:43:27 IST" name="getPetsByStatus" finished-at="2022-06-24T21:43:29 IST" depends-on-methods="com.test.pet.ApiTestCases.PetTests.updatePet" duration-ms="2037" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-25T16:32:15 IST" name="setUp" finished-at="2022-06-25T16:32:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getPetsByStatus()[pri:3, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-25T16:32:15 IST" name="getPetsByStatus" finished-at="2022-06-25T16:32:16 IST" depends-on-methods="com.test.pet.ApiTestCases.PetTests.updatePet" duration-ms="1632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPetsByStatus -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.PetTests@5c1f6d57]" started-at="2022-06-24T21:43:27 IST" name="setUp" finished-at="2022-06-24T21:43:27 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
       </class> <!-- com.test.pet.ApiTestCases.PetTests -->
       <class name="com.test.pet.ApiTestCases.UserAPITest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-24T21:43:19 IST" name="setUp" finished-at="2022-06-24T21:43:19 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-25T16:32:06 IST" name="setUp" finished-at="2022-06-25T16:32:06 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="createListOfUser()[pri:0, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-24T21:43:19 IST" name="createListOfUser" finished-at="2022-06-24T21:43:21 IST" duration-ms="1980" status="PASS">
+        <test-method signature="createListOfUser()[pri:0, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-25T16:32:06 IST" name="createListOfUser" finished-at="2022-06-25T16:32:09 IST" duration-ms="3245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createListOfUser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-24T21:43:21 IST" name="setUp" finished-at="2022-06-24T21:43:21 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-25T16:32:09 IST" name="setUp" finished-at="2022-06-25T16:32:09 IST" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="updateUserDetail()[pri:1, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-24T21:43:21 IST" name="updateUserDetail" finished-at="2022-06-24T21:43:23 IST" depends-on-methods="com.test.pet.ApiTestCases.UserAPITest.createListOfUser" duration-ms="1756" status="PASS">
+        <test-method signature="updateUserDetail()[pri:1, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-25T16:32:09 IST" name="updateUserDetail" finished-at="2022-06-25T16:32:11 IST" depends-on-methods="com.test.pet.ApiTestCases.UserAPITest.createListOfUser" duration-ms="1692" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateUserDetail -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-24T21:43:23 IST" name="setUp" finished-at="2022-06-24T21:43:23 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-25T16:32:11 IST" name="setUp" finished-at="2022-06-25T16:32:11 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="getUserDetail()[pri:2, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-24T21:43:23 IST" name="getUserDetail" finished-at="2022-06-24T21:43:25 IST" depends-on-methods="com.test.pet.ApiTestCases.UserAPITest.updateUserDetail" duration-ms="2062" status="PASS">
+        <test-method signature="getUserDetail()[pri:2, instance:com.test.pet.ApiTestCases.UserAPITest@6d4e5011]" started-at="2022-06-25T16:32:11 IST" name="getUserDetail" finished-at="2022-06-25T16:32:13 IST" depends-on-methods="com.test.pet.ApiTestCases.UserAPITest.updateUserDetail" duration-ms="1922" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserDetail -->

@@ -62,15 +62,4 @@ public class PetTests extends BaseTest {
 		}
 	}
 
-//	@Test(priority = 3)
-//	public void verifyUpdatedPet() {
-//
-//		List<String> ff = (List<String>) given().header("Content-Type", "application/json")
-//				.queryParam("status", pet.status).get(PET_ENDPOINT + "/findByStatus").then().log().all().extract()
-//				.body();
-//		System.out.println(ff);
-//
-////		PetPojoResponse petResponse = petsController.findPet(pet);
-////		Assert.assertEquals(petResponse.getName(), pet.getName());
-//	}
 }
