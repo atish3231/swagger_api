@@ -31,7 +31,6 @@ public class PetDataCreator {
 		tags.add(tag);
 
 		pet.setId(String.valueOf(petID));
-		System.out.println(petID);
 		pet.setName("Updated" + fake.name().firstName());
 		pet.setCategory(categoryMap);
 		pet.setPhotoUrls(photoUrlList);

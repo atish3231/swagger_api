@@ -58,7 +58,7 @@ public class PetTests extends BaseTest {
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		List<String> getAllNames = jsonPathEvaluator.get("name");
 		if (!getAllNames.contains(name)) {
-			Assert.fail();
+			Assert.fail("Pet Name not matched when called by Id and status" + "Status" + status);
 		}
 	}
 
