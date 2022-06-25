@@ -17,6 +17,15 @@ import io.restassured.response.Response;
 
 public class PetTests extends BaseTest {
 
+//	private RequestSpecification requestSpecification;
+//
+//	@BeforeClass
+//	public void PetsController() {
+//		RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();
+//		requestSpecBuilder.log(LogDetail.ALL);
+//		requestSpecification = requestSpecBuilder.build();
+//	}
+
 	public static String PET_ENDPOINT = baseUri + "/pet";
 
 	PetDataCreator pet_data_creator = new PetDataCreator();
@@ -34,6 +43,7 @@ public class PetTests extends BaseTest {
 		id = jsonPathEvaluator.get("id");
 		response.then().statusCode(200);
 		response.prettyPrint();
+		writeRequestAndResponseInReport(writer.toString(), response.prettyPrint());
 	}
 
 	@Test(priority = 2, dependsOnMethods = "addNewPet")
@@ -49,6 +59,7 @@ public class PetTests extends BaseTest {
 		status = jsonPathEvaluator.get("status");
 		Assert.assertEquals(name, pet.name);
 		Assert.assertEquals(status, pet.status);
+		writeRequestAndResponseInReport(writer.toString(), response.prettyPrint());
 
 	}
 
@@ -63,6 +74,7 @@ public class PetTests extends BaseTest {
 		if (!getAllNames.contains(name)) {
 			Assert.fail("Pet Name not matched when called by Id and status" + "Status" + status);
 		}
+		writeRequestAndResponseInReport(writer.toString(), response.prettyPrint());
 	}
 
 }

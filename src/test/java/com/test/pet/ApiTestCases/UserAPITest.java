@@ -30,6 +30,7 @@ public class UserAPITest extends BaseTest {
 		response.prettyPrint();
 
 		response.then().statusCode(200);
+		writeRequestAndResponseInReport(writer.toString(), response.prettyPrint());
 	}
 
 	@Test(dependsOnMethods = "createListOfUser", priority = 1)
@@ -44,6 +45,7 @@ public class UserAPITest extends BaseTest {
 		response.prettyPrint();
 
 		response.then().statusCode(200);
+		writeRequestAndResponseInReport(writer.toString(), response.prettyPrint());
 	}
 
 	@Test(dependsOnMethods = "updateUserDetail", priority = 2)
@@ -54,5 +56,6 @@ public class UserAPITest extends BaseTest {
 		response.prettyPrint();
 
 		response.then().statusCode(200);
+		writeRequestAndResponseInReport(writer.toString(), response.prettyPrint());
 	}
 }
