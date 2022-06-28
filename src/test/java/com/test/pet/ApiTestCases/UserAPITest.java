@@ -19,22 +19,20 @@ public class UserAPITest extends BaseTest {
 
 	String username = "";
 
-	@Test(priority = 0)
-	public void createListOfUser() {
+	@Test(priority = 0, description = "Create a list of new user's")
+	public void createListOfUser() throws Exception {
 
 		UserDataCreator us = new UserDataCreator();
 		getUserList = us.createUser(5);
 
 		Response response = given().header("Content-Type", "application/json").contentType(ContentType.JSON)
 				.body(getUserList).post(ConstantsClass.createMultipleUserEndPoint);
-		response.prettyPrint();
-
 		response.then().statusCode(200);
-		writeRequestAndResponseInReport(writer.toString(), response.prettyPrint());
+		writeRequestAndResponseInReport(response.asPrettyString());
 	}
 
-	@Test(dependsOnMethods = "createListOfUser", priority = 1)
-	public void updateUserDetail() {
+	@Test(dependsOnMethods = "createListOfUser", description = "Update the newly created user details")
+	public void updateUserDetail() throws Exception {
 
 		UserDataCreator us = new UserDataCreator();
 
@@ -42,20 +40,16 @@ public class UserAPITest extends BaseTest {
 		username = user.username;
 		Response response = given().header("Content-Type", "application/json").contentType(ContentType.JSON).body(user)
 				.put(String.format("/user/%s", getUserList.get(0).username));
-		response.prettyPrint();
-
 		response.then().statusCode(200);
-		writeRequestAndResponseInReport(writer.toString(), response.prettyPrint());
+		writeRequestAndResponseInReport(response.asPrettyString());
 	}
 
-	@Test(dependsOnMethods = "updateUserDetail", priority = 2)
-	public void getUserDetail() {
+	@Test(dependsOnMethods = "updateUserDetail", description = "Get Updated user details")
+	public void getUserDetail() throws Exception {
 
 		Response response = given().header("Content-Type", "application/json").contentType(ContentType.JSON)
 				.get(String.format("/user/%s", username));
-		response.prettyPrint();
-
 		response.then().statusCode(200);
-		writeRequestAndResponseInReport(writer.toString(), response.prettyPrint());
+		writeRequestAndResponseInReport(response.prettyPrint());
 	}
 }

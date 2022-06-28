@@ -22,9 +22,10 @@ public class ListenerClass implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 		TestcaseName = result.getMethod().getDescription();
+		String method_name = result.getMethod().getMethodName();
 		setTestcaseName(TestcaseName);
-		ExtentManager.setExtentTest(ExtentReport.report.startTest(TestcaseName));
-		LogStatus.pass(TestcaseName + " is started successfully");
+		ExtentManager.setExtentTest(ExtentReport.report.startTest(method_name));
+		LogStatus.pass(TestcaseName + " : is started successfully");
 
 	}
 

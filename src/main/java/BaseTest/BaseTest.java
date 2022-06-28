@@ -53,10 +53,8 @@ public class BaseTest {
 
 	}
 
-	public void writeRequestAndResponseInReport(String request, String response) {
+	public void writeRequestAndResponseInReport(String response) {
 
-		LogStatus.info("---- Request ---");
-		formatAPIAndLogInReport(request);
 		LogStatus.info("---- Response ---");
 		formatAPIAndLogInReport(response);
 	}

@@ -7,6 +7,7 @@ public class LogStatus {
 	}
 
 	public static void pass(String message) {
+
 		ExtentManager.getExtTest().log(com.relevantcodes.extentreports.LogStatus.PASS, message);
 
 	}
