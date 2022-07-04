@@ -30,7 +30,9 @@ public class PetTests extends BaseTest {
 		Response response = given().header("Content-Type", "application/json").body(pet).post(PET_ENDPOINT);
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		id = jsonPathEvaluator.get("id");
+		// Assert status code
 		response.then().statusCode(200);
+		// writing in extent report
 		writeRequestAndResponseInReport(response.prettyPrint());
 	}
 
@@ -38,7 +40,9 @@ public class PetTests extends BaseTest {
 	public void verifyNewPet() throws Exception {
 		int i = value(id);
 		Response response = given().header("Content-Type", "application/json").get(PET_ENDPOINT + "/" + i);
+		// Assert status code
 		response.then().statusCode(200);
+		// writing in extent report
 		writeRequestAndResponseInReport(response.prettyPrint());
 	}
 
@@ -49,26 +53,32 @@ public class PetTests extends BaseTest {
 
 		PetDataClass pet = pet_data_creator.petDataforUpdate(i);
 		Response response = given().header("Content-Type", "application/json").body(pet).put(PET_ENDPOINT);
+		// Assert status code
 		response.then().statusCode(200);
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		name = jsonPathEvaluator.get("name");
 		status = jsonPathEvaluator.get("status");
-		writeRequestAndResponseInReport(response.prettyPrint());
+		// assertion on validating the pet is updated successfully
 		Assert.assertEquals(name, pet.name);
 		Assert.assertEquals(status, pet.status);
-
+		// writing in extent report
+		writeRequestAndResponseInReport(response.prettyPrint());
 	}
 
 	@Test(dependsOnMethods = "updatePet", description = "Validate pet by call the status of that pet")
 	public void getPetsByStatus() throws Exception {
 		Response response = given().header("Content-Type", "application/json").queryParam("status", status)
 				.get(PET_ENDPOINT + "/findByStatus");
+		// Assert status code
 		response.then().statusCode(200);
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		List<String> getAllNames = jsonPathEvaluator.get("name");
 		if (!getAllNames.contains(name)) {
+			// assertion when fetching pet by last updated status and validating the pet is
+			// updated or not with the status
 			Assert.fail("Pet Name not matched when called by Id and status" + "Status" + status);
 		}
+		// writing in extent report
 		writeRequestAndResponseInReport(response.prettyPrint());
 	}
 

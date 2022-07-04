@@ -5,8 +5,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.StringWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 import org.apache.commons.io.output.WriterOutputStream;
 import org.testng.annotations.AfterSuite;
@@ -23,6 +21,7 @@ public class BaseTest {
 	protected StringWriter writer;
 	protected PrintStream logs_capture;
 
+	/* This method helps to write the request and response to the extent report */
 	@BeforeMethod
 	public void setUp() {
 		RestAssured.baseURI = ConstantsClass.baseUri;
@@ -35,15 +34,10 @@ public class BaseTest {
 		ExtentReport.initialize();
 	}
 
-	public String generateStringFromResource(String path) throws IOException {
-		String temp = "";
-		try {
-			temp = new String(Files.readAllBytes(Paths.get(path)));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return temp;
-	}
+	/*
+	 * Flushing the extent report Opening the extent report automatically after the
+	 * test suite execution.
+	 */
 
 	@AfterSuite
 	public void afterSuite() throws IOException {

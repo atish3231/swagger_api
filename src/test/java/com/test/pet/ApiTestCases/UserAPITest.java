@@ -27,7 +27,9 @@ public class UserAPITest extends BaseTest {
 
 		Response response = given().header("Content-Type", "application/json").contentType(ContentType.JSON)
 				.body(getUserList).post(ConstantsClass.createMultipleUserEndPoint);
+		// Assert status code
 		response.then().statusCode(200);
+		// writing in extent report
 		writeRequestAndResponseInReport(response.asPrettyString());
 	}
 
@@ -40,7 +42,9 @@ public class UserAPITest extends BaseTest {
 		username = user.username;
 		Response response = given().header("Content-Type", "application/json").contentType(ContentType.JSON).body(user)
 				.put(String.format("/user/%s", getUserList.get(0).username));
+		// Assert status code
 		response.then().statusCode(200);
+		// writing in extent report
 		writeRequestAndResponseInReport(response.asPrettyString());
 	}
 
@@ -49,7 +53,9 @@ public class UserAPITest extends BaseTest {
 
 		Response response = given().header("Content-Type", "application/json").contentType(ContentType.JSON)
 				.get(String.format("/user/%s", username));
+		// Assert status code
 		response.then().statusCode(200);
+		// writing in extent report
 		writeRequestAndResponseInReport(response.prettyPrint());
 	}
 }
